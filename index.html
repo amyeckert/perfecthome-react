@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<main class="container">
 		
 		<h1 class="message">Find Your Perfect Home!</h1>
 
@@ -34,7 +34,7 @@
 		</div>
 
 		<div class="q1">
-			<form id="questions1" name="questions1" action="buildJson.php" method='post'>
+			<form id="questions1" name="questions1" action="buildJson.php" method='post' aria-label="questionnaire">
 				<div class="question"> 	
 					<label for="adj1">Enter an adjective.</label>
 					<input id="adj1" class="js-input adj1" name="adj1" type="text" data-error-msg="Don't forget this one." placeholder="Adjective..." aria-required="true">
@@ -117,7 +117,7 @@
 		</div>
 	
 		<div class="q2">
-			<form id="questions2" name="questions2" action="buildJson.php" method='post'>
+			<form id="questions2" name="questions2" action="buildJson.php" method='post' aria-label="questionnaire">
 
 				<div class="question">
 					<label for="num5">Enter a number from 0 - 10.</label>
@@ -191,7 +191,7 @@
 		</div>
 
 		<div class="q3">
-			<form id="questions3" name="questions3" action="buildJson.php" method='post'>
+			<form id="questions3" name="questions3" action="buildJson.php" method='post' aria-label="questionnaire">
 				<div class="question">
 					<label for="num6">Enter a number from 0 - 5.</label>
 					<input id="num6" class="js-input num6" name="num6" type="number" min="0" max="5" data-error-msg="Oops" placeholder="#" aria-required="true"><p class="error"></p>
@@ -286,6 +286,7 @@
 			<button class="btn btn-orange btn-reset" type="reset" onClick="window.location.reload()">Not exactly perfect?</button>
 
 		</div> <!-- close listings -->
+
 		<div class="share">
 
 			<button class="js-copy-listing btn btn-copy btn-ghost">Click here to copy this listing, then share! 
@@ -319,6 +320,7 @@
 				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><title>Artboard 1</title><path d="M0,26c3-1,6-2.82,9-2.85C32.71,22.91,56.37,23,80,23c1.17,0,2.45-.3,3.47.1a15.89,15.89,0,0,1,3.32,2.37c-1,.86-2,2-3.16,2.47s-2.63.12-4,.12H5.44v94.47H99.91v-5.27q0-34.74,0-69.49a15.61,15.61,0,0,1,.22-4.46,3.62,3.62,0,0,1,2.36-2c.57-.13,1.85,1,2.08,1.72a15.59,15.59,0,0,1,.38,4.43c0,24,.11,48-.12,72,0,2.86-1.86,5.7-2.85,8.55H0Z"/><path d="M128,43c-3.63,2.59-5.13,1.28-5.13-2.8,0-10,0-19.94,0-31.13-2,1.81-3.25,2.91-4.45,4.1Q95.28,36.29,72.16,59.41a13.52,13.52,0,0,1-2.94,2.66c-.84.44-2.71.52-3,.08A4.12,4.12,0,0,1,66,58.76c.62-1.28,1.93-2.25,3-3.3q22.94-23,45.89-45.9C116,8.42,117,7.2,119,5.13c-11.1,0-21.15,0-31.2,0C83.57,5.14,82.52,3.54,85,0h43Z"/></svg>
 				</a>
 			</div>
+
 			<button class=" btn btn-ghost btn-about js-modal-open" >About this site.</button>
 			
 			<!-- MODAL / ABOUT -->
@@ -343,7 +345,7 @@
 				</div>
 			</div> <!-- close modal -->
 		</div> <!-- close share -->
-
+    </main>
 	<!-- JQUERY, etc. -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
