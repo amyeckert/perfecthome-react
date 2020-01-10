@@ -1,0 +1,493 @@
+
+body {
+	height: 100%;
+	background-attachment: fixed;
+	background-color: $c-peach;
+	box-sizing: border-box;
+	background-image: url("../img/peek-sm.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: $baseFontSize;
+	color: $c-text;
+}
+h1 {
+	margin: 0 0 12px 0;
+	font-family: $f-title;
+	@include font-size(40);
+	text-align: center;
+
+	@include bp(small) {
+		@include font-size(55);
+		margin: 30px 0;
+		
+	}
+	@include bp(medium) {
+		@include font-size(60);
+		@include line-height(60);
+	}
+	@include bp(xlarge) {
+		@inlcude font-size(110);
+	}
+}
+/*	FORM FIELD STYLES */
+fieldset, 
+form, 
+label, 
+legend {
+	width: 100%;
+	margin: 0;
+	padding: 0 0 0 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+label {
+	font-size: $baseFontSize;
+	order: 1;
+	min-width: 100%;
+
+	@include bp(small){
+		@include font-size(18);
+	}
+}
+select,
+input[type="number"],
+input[type="text"] {
+	box-sizing: border-box;
+	display: block;
+	margin: 5px 0 3px 0;
+	width: 100%;
+	min-height: 35px;
+	height: 35px;
+	padding: 8px;
+	color: $c-grey-med;
+	order: 2;
+	background-color: transparent;
+	border: 1px solid $c-grey-med;
+	border-radius: 4px;
+	flex:1 0 0;
+	@include font-size(14);
+	
+	@include bp-arb(xsmall) {
+		min-width: 75%;
+	}
+	@include bp(small){
+		min-width: 50%;
+	}
+}
+#firstName {
+	width: 100%;
+	margin: 10px auto;
+
+	@include bp(small){
+		width: 50%;
+		
+	}	
+}
+option {
+	font-size: $baseFontSize;
+	text-transform: none;
+	@include bp(small){
+		@include font-size(27);
+	}
+}
+a {
+	color: $c-text;
+	&:hover {
+		color: $c-white;
+		text-decoration: none;
+		border-radius: 0;
+		box-shadow: none;
+		outline: 1px solid $c-orange;
+	}
+}
+.container {
+	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-flow: column;
+	margin: 0 auto;
+	padding: 30px;
+	max-width: 50%;
+	min-width: 255px;
+	font-family: $f-text;
+	border: none;
+	background-color: transparent;
+	color: $c-text;
+	position: relative;
+
+	// semi-transparent white box
+	&:after {
+		content: "";
+		background-color: $c-white;
+		position: absolute;
+		opacity: 0.8;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+	h1 {
+		 order: 0;
+	}
+	.enter-name {
+		order: 1;
+		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  		display: -ms-flexbox;      /* TWEENER - IE 10 */
+  		display: -webkit-flex;     /* NEW - Chrome */
+  		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		flex-direction: row;
+		text-align: center;
+		flex-wrap: nowrap;
+		padding: 0 0 0 15px;
+
+	}
+	.q1 {
+		display: flex;
+		order: 3;
+		flex-flow: column nowrap;
+	}
+	.q2 {
+		display: flex;
+		order: 4;
+		flex-flow: column nowrap;
+	}
+	.q3 {
+		display: flex;
+		order: 5;
+		flex-flow: column nowrap;	
+	}
+	.question {
+		display: flex;
+		flex-flow: column wrap;
+		position: relative;
+		margin: 0 0 0 0 ;
+		order: 3;
+
+		@include bp(small) {
+			flex-flow: column wrap;
+		}
+		@include bp(medium) {
+			flex-flow: row wrap;
+			margin: 0 0 1rem 0 ;
+		}
+
+	}
+	.error {
+		// background-color: yellow;
+		@include font-size(14);
+		height: 20px;
+	    margin: 0 0 0 0;
+		font-style: italic;
+		color: $c-warning;
+		max-width: 100%;
+		order: 3;
+		flex: 2 0 auto;
+
+		@include bp(medium) {
+			padding: 15px 0 0 0;
+			
+		}
+	}
+}
+
+//	 BUTTONS ----------------------//
+.btn {
+	display: block;
+    margin: 0 ;
+	padding: 0.6rem 1rem;
+	border-style: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: $c-white;
+	font-size: $baseFontSize;
+	order: 3;
+
+	+ p {
+		display: inline-block;
+		@include font-size(14);
+		height: 1rem;
+		margin: 0;
+		font-style: italic;
+		color: $c-warning;
+		order: 4;
+	}
+
+}
+.btn-orange {
+	background-color: $c-orange;
+	&:hover {
+		box-shadow: none;
+		border: 1px solid $c-orange;
+		color: $c-white;
+		text-decoration: none;	
+		
+	}
+}
+
+#btn-name, 
+.btn-reset {
+	margin: 0 auto;
+}
+a:active,
+select:focus,
+button[type="submit"]:focus,
+button[type="submit"]:active,
+input[type="number"]:focus,
+input[type="text"]:focus {
+	border-color: $c-orange;
+	box-shadow: none;
+ 	outline: none;
+ 	box-shadow: none;
+}
+.listings {
+	display: block;
+	width: 100%;
+	margin: 1rem auto;
+	order: 6;
+	@include font-size(18);
+
+	@include bp(xsmall) {
+		width: 90%;
+		font-size: $baseFontSize;
+	}
+	@include bp(small){
+		width: 75%;
+		margin: 0 auto 2rem auto;
+
+	}
+	@include bp(large){
+		width: 60%;
+	}
+	.img-print-only {
+		display: none;
+	}
+		
+	.js-list1 {
+		order: 6;
+	    margin: 0 0 0 0;
+	    @include bp(small){
+	    	margin: 0 0 2rem 0;
+		} 
+	}
+	.js-list2 {
+		order: 7;
+	    margin: 0 0 0 0;
+	    @include bp(small){
+	    	margin: 0 0 2rem 0;
+		} 
+	} 
+	.js-list3 { 
+		order: 8;
+	    margin: 0 0 0 0;
+	    @include bp(small){
+	    	margin: 0 0 2rem 0;
+		} 
+	}
+}
+span {
+	text-transform: lowercase;
+}
+span.landmark{
+	text-transform: none;
+}
+span.firstName,
+span.water,
+span.bestie,
+span.favCartoon,
+span.favCountry,
+span.favAnimal, 
+span.verb1, 
+span.artist,
+span.prez, 
+span.favCity,
+span.error {
+	text-transform: capitalize;
+}
+.share {
+	display: flex;
+	flex-flow: column nowrap;
+	order: 9;
+	width: 100%;
+	margin: 0.3rem auto 0 auto;
+	p {
+		flex: 0 1 auto;
+    	width: 100%;
+    	margin: 1rem 0 0 0 ;
+		@include font-size(14);
+    	text-align: center;
+	}
+	.copyright {
+		
+	}
+	.btn-copy {
+		order: 1;
+	}
+	.btn-ghost {
+		// order: 1;
+		color: $c-text;
+		background-color: transparent;
+		border: 1px solid transparent;
+		@include font-size(14)
+		margin: 0 auto;
+		padding: 15px;
+		text-decoration: none;
+		&:hover {
+		    border: 1px solid $c-text;
+	    	outline: none;
+	    	border-radius: 4px;
+		}
+		svg {
+			height: 15px;
+			margin: 0 0 0 3px;
+		}
+		@include bp(medium) {
+			display: block;
+		}
+	}	
+	.icons {
+		order: 2;
+		display: inline-flex;
+		justify-content: center;
+		margin: 0.3rem auto 0 auto;
+		height: 30px;
+		
+		.email {
+			a{
+				svg{
+					margin-top: 5px;
+					height: 30px;
+				}
+			}
+		} 
+		.share-icon {
+			margin: 0 10px;
+			height: 100%;
+			a {
+				&:hover {
+					border: none;
+					outline: none;
+				}
+				svg {
+					height: 25px;
+				}
+			}
+		}
+		.fb-share-icon {
+			span {
+				visibility: hidden;
+				.svg {
+					fill: $c-white;
+				}
+			}
+		}
+	}
+	.btn-about {
+		order: 3;
+	}
+	.eliza {
+		order: 4;
+		margin: 1rem 0 0 0;
+		text-align: center;
+		color: $c-text;
+		a {
+			color: $c-text;
+			border: 1px solid transparent;
+			@include font-size(14)
+			margin: 0 auto;
+			padding: 15px;
+			text-decoration: none;
+	    	&:hover {
+			    border: 1px solid $c-text;
+		    	outline: none;
+		    	border-radius: 4px;
+
+			}
+			&:active {
+				color: $c-orange;
+		
+		    }
+	    	@include bp(xsmall) {
+		    	&:hover {
+		    		border: none;
+		    	}
+	    	}
+			svg {
+				height: 12px;
+				margin: 0 0 0 3px;
+			}
+		}
+	}
+}
+	//	MODAL STYLES -----------------------------//
+.modal-on {
+	overflow: hidden;
+}
+
+.modal-container {
+	order: 3;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $c-peach;
+
+
+	.modal {
+		background-color: $c-peach;
+		width: 80%;
+		margin: 0 auto;
+		border-radius: 20px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%); //centers it. 
+		text-align: left;
+
+		@include bp(small){
+			width: 40%;
+
+		}
+		@include bp(medium){
+			top: 30%;
+		}
+	}
+
+	.modal-header {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+
+	}
+	.close {
+		position: absolute;
+		text-transform: uppercase;
+		@include font-size(12);
+		right: 0;
+		top: 0;
+	}
+	.modal-content {
+		width: 90%;
+		margin: 0 auto;
+		text-align: left;
+		p.explain {
+			text-align: left;
+			a {
+				color: $c-text;	
+			}
+		}
+		p.copyright {
+			@include font-size(12);
+		}
+	}
+}
+

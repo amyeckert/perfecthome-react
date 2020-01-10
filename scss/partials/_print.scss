@@ -1,0 +1,61 @@
+// source : https://github.com/rachelandrew/css-for-print/blob/master/book.html
+
+// https://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/
+
+// ---------- specify page size and orientation:
+@media print {
+
+	// set up the page structure 
+	@page {
+		size: 8.5in 11in portrait;
+		margin: 0.5in 0.25in 0.25in 0.25in;
+	}
+
+	// specific styles for elements
+	body {
+		background: #fff;
+		width: 100% !important;
+
+		.container {
+			max-width: 70% !important;
+			border: 1px solid orange;
+
+			.message {
+				font-size: 50px;
+			}
+			.listings {
+
+				margin-bottom: 0;
+			
+				.img-print-only {
+					display: block;
+					max-width: 100%;
+					margin: auto;
+				}
+			}
+			.share {
+				.icons {
+					display: none;
+				}
+				button {
+					display: none;	
+				}
+				.eliza {
+					a > svg {
+						display: none;
+					}
+
+					a[href^=http]:after {
+						display: block;
+						width: 100%;
+						margin: 0 auto;
+				      	content: "Visit www.eliza.liveinsouthjersey.com";
+					}
+				}
+			}
+		}
+	}
+}
+@media print and (color){
+
+}

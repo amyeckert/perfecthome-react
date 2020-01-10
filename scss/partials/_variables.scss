@@ -1,0 +1,54 @@
+// ------- COLORS -------//
+
+$c-orange: 	  rgba(255,155,68,1);
+$c-text: 	    rgba(63,63,61,1);
+$c-grey-med:  #878787;
+$c-warning:   rgba(255,0,68,1);
+$c-white: 	  #fff;
+$c-peach: 	 rgba(255, 243, 232,1);
+$c-mango:     rgba(249,184,6,1);
+
+// ------- FONTS -------//
+@font-face {
+  font-family: 'Majesti-Banner-Bold';
+  src: url('../fonts/Majesti-Banner-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Majesti-Banner-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       // url('../fonts/Majesti-Banner-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Majesti-Banner-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Majesti-Banner-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Majesti-Banner-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Majesti-Banner-Heavy';
+  src: url('../fonts/Majesti-Banner-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Majesti-Banner-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       // url('../fonts/Majesti-Banner-Heavy.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Majesti-Banner-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Majesti-Banner-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Majesti-Banner-Heavy.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway');
+
+
+$baseFontSize:			16;
+$baseLineHeight:		$baseFontSize * 1.8;
+
+
+$f-text: 				'Raleway', sans-serif;
+$f-title:   			'Majesti-Banner-Heavy', serif;
+
+// ------- BREAKPOINTS -------//
+$bp-xsmall:				340;
+$bp-small:        750;
+$bp-medium:				1024;
+$bp-large:				1200;
+$bp-xlarge:				1500;
+
+
+// ------- MEDIA QUERIES -------//
+$mq-xsmall:				"only screen and (min-width: #{$bp-xsmall}px)";
+$mq-small:        "only screen and (min-width: #{$bp-small}px)";
+$mq-medium:				"only screen and (min-width: #{$bp-medium}px)";
+$mq-large:				"only screen and (min-width: #{$bp-large}px)";
+$mq-xlarge:				"only screen and (min-width: #{$bp-xlarge}px)";
+$mq-retina:				"only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx)";

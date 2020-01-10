@@ -1,0 +1,57 @@
+@mixin bp($point) {
+  @if ($MQs) {
+    @if $point == xsmall {
+      @media #{$mq-xsmall} { @content; }
+    }
+    @else if $point == small {
+      @media #{$mq-small} { @content; }
+    }
+    @else if $point == medium {
+      @media #{$mq-medium} { @content; }
+    }
+    @else if $point == large {
+      @media #{$mq-large}  { @content; }
+    }
+    @else if $point == xlarge {
+      @media #{$mq-xlarge}  { @content; }
+    }
+    @else if $point == retina {
+      @media #{$mq-retina}  { @content; }
+    }
+  }
+  @else {
+    @if $point != retina {
+      @content;
+    }
+  }
+}
+
+@mixin bp-max($point) {
+  @if $point == small {
+     @media (max-width: ($bp-small - 1px)) { @content; }
+  }
+  @else if $point == medium {
+     @media (max-width: ($bp-medium - 1px)) { @content; }
+  }
+  @else if $point == large {
+     @media (max-width: ($bp-large - 1px)) { @content; }
+  }
+}
+
+//Arbitrary Media Query Mixin
+@mixin bp-arb($val) {
+  @if ($MQs) {
+    @media only screen and (min-width: #{$val}px) { @content; }
+  }
+}
+
+@mixin font-size($pixelSize: $baseFontSize) {
+  font-size: #{$pixelSize / $baseFontSize}rem;
+  font-size: #{$pixelSize}px;
+}
+
+@mixin line-height($pixelSize: $baseLineHeight) {
+  line-height: #{$pixelSize / $baseFontSize}rem;
+  line-height: #{$pixelSize}px;
+
+}
