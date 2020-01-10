@@ -5,6 +5,7 @@ all images © Amy Eckert.
 
 A work in progress! 
 This is the React.js version. 
+https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658
 https://www.youtube.com/watch?v=MpGLUVbqoYQ&t=477s
 
 This is an off-shoot of my larger project called Manufacturing Home which is a photography project 

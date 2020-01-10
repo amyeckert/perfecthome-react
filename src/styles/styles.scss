@@ -1,4 +1,5 @@
 $MQs: true;
+
 /********************
 ** Vendors
 ********************/
@@ -6,10 +7,15 @@ $MQs: true;
 @import 'vendor/normalize';
 
 /********************
+** Global
+********************/
+@import 'global/variables';
+@import 'global/mixins';
+
+
+/********************
 ** Partials
 ********************/
-@import 'partials/variables';
-@import 'partials/mixins';
 @import 'partials/perfecthome';
 @import 'partials/print';
 
